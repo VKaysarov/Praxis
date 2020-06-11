@@ -21,8 +21,28 @@ menu {
 	display: flex;
 	align-self: center;
 	justify-self: end;
-	padding: 0 36px 0 0;
 	margin: 0;
+	padding-right: 5%;
+}
+
+menu > li:after {
+    position: relative;
+}
+
+menu > li:after {
+    content: '';
+    display: block;
+    top: 33px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #0dffca8a;
+    transition-duration: 1s;
+}
+
+menu > li:hover:after {
+    left: 0;
+    width: 100%;
 }
 
 li {
@@ -31,11 +51,20 @@ li {
 	color: #fff;
 }
 
-.logo {
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*.logo {
 	width: 80px;
 	height: 80px;
-	margin-left: 36px;
 	background-color: rgba(255, 255, 255, .3);
+}*/
+
+.logo img {
+	height: 80px;
+	margin-left: 5%;
 }
 
 
@@ -66,7 +95,8 @@ li {
 .overlay {
 	display: flex;
 	justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: radial-gradient(rgba(0, 0, 0, 0.5), #000000a3);
     position: absolute;
     top:0;
     left:0;
@@ -83,9 +113,102 @@ li {
     margin-top:17%;
 }
 
-.hot-tour {
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100%;
+}
+
+.hot-tour {
+	display: flex;
+}
+
+.tour {
+	width: 240px;
+	height: 440px;
+	margin: 25px;
+	/*border: 1px solid rgba(50, 50, 50, .4);*/
+	background-color: rgb(250, 250, 250);
+	box-shadow: 0 0 20px 0px rgb(200, 200, 200); 
+}
+
+.img {
+	height: 45%;
+	background-size: cover;
+}
+
+.img.one {
+	background-image: url(../img/NY.jpg);
+} 
+
+
+.img.two {
+	background-image: url(../img/Amsterdam.jpg);
+} 
+
+.img.three {
+	background-image: url(../img/Budapest.jpg);
+} 
+
+.img.four {
+	background-image: url(../img/London.jpg);
+} 
+
+.caption-tour {
+	height: 50%;
+	display: grid;
+}
+
+.card-title {
+	text-indent: 10px;
+}
+
+.reviews-price {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.price {
+	justify-self: center;
+	font-weight: 900;
+	color: #54dace;
+}
+
+.price p {
+	margin: 0;
+	color: #000;
+	font-size: 12px;
+}
+
+.card-footer {
+	align-self: end;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.add-favorite, .buy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-favorite {
+	width: 35px;
+	height: 35px;
+	font-size: 25px;
+	color: #f12929cc;
+	border: 1px solid #f12929cc;
+	cursor: pointer;
+}
+
+.buy {
+	padding: 5px;
+	color: #fff;
+	background-color: #f12929cc;
+	cursor: pointer;
 }
 
 ::-webkit-scrollbar {
